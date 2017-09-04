@@ -22,7 +22,8 @@ try {
     $pass = md5(addslashes($pass));
     $sql = "INSERT INTO users (email, pass, name, lastname) VALUES ('$email', '$pass', '$name', '$lastname')";
     $sql = $pdo->query($sql);
-    echo "Conta criada com sucesso";
+    header('Location: index.php');
+    exit;
     }else{
     echo "Falha ao criar conta";
     }
