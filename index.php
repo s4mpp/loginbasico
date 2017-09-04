@@ -6,10 +6,10 @@
 <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
 <link rel="stylesheet" href="css/style.css" media="screen">
 </head>
+<body class="bg-success">
 <?php
 session_start();
 ?>
-<body class="bg-success">
 <div class="container">
 <div class="row">
 <div class="col-xs-4 col-xs-offset-4 bg-primary margin-radius padding">

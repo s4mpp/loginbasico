@@ -10,11 +10,9 @@ try {
     $sql = "SELECT * FROM users WHERE email = '$email' AND pass = '$pass'";
     $sql = $pdo->query($sql);
     if($sql->rowCount() > 0){
-    foreach ($sql->fetchAll() as $users){
-    echo "email: ".$users['email']."<br>";
-    }
+
     }else{
-    echo "Não a contas cadastradas";
+    echo "Seu Email ou sua senha esta errado";
     }
 }catch (PDOException $e){
     echo "Erro: ".$e->getMessage();
