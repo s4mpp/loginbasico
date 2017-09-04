@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="css/style.css" media="screen">
 </head>
+<?php
+session_start();
+?>
 <body class="bg-success">
 <div class="container">
 <div class="row">
