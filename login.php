@@ -10,7 +10,7 @@ try {
     $sql = "SELECT * FROM users WHERE email = '$email' AND pass = '$pass'";
     $sql = $pdo->query($sql);
     if($sql->rowCount() > 0){
-
+    echo "existem contas";
     }else{
     echo "Seu Email ou sua senha esta errado";
     }
