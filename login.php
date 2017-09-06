@@ -7,10 +7,12 @@ try {
     $dbuser = "root";
     $dbpass = "";
     $pdo = new PDO ($db, $dbuser, $dbpass);
+    if(isset($email) && !empty($email) && isset($pass) && !empty($pass)){
     $sql = "SELECT * FROM users WHERE email = '$email' AND pass = '$pass'";
     $sql = $pdo->query($sql);
     if($sql->rowCount() > 0){
-    echo "existem contas";
+    header('Location: verificacao.php');
+    }else{header("Location: index.php");}
     }else{
     echo "Seu Email ou sua senha esta errado";
     }
