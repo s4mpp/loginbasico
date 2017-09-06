@@ -11,10 +11,11 @@ try {
     $sql = "SELECT * FROM users WHERE email = '$email' AND pass = '$pass'";
     $sql = $pdo->query($sql);
     if($sql->rowCount() > 0){
-    header('Location: verificacao.php');
-    }else{header("Location: index.php");}
-    }else{
-    echo "Seu Email ou sua senha esta errado";
+    $sql->fetch();
+    header("Location: verificacao.php");
+    exit;
+    }}else{
+    echo "senha ou email errado";
     }
 }catch (PDOException $e){
     echo "Erro: ".$e->getMessage();
