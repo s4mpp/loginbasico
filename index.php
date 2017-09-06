@@ -13,7 +13,7 @@ session_start();
 <div class="container">
 <div class="row">
 <div class="col-xs-4 col-xs-offset-4 bg-primary margin-radius padding">
-<h1 class="text-center text-danger">Cadastrar</h1>
+<h1 class="text-center text-danger">Login</h1>
 <form method="post" class="form-group" action="login.php">
 <label>E-Mail:</label>
 <input type="email" name="email" class="form-control" placeholder="Digite seu E_Mail" required>
