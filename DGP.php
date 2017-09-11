@@ -9,6 +9,16 @@
 <body class="bg-success">
 <?php
 session_start();
+require_once('verificacao.php');
+echo "<div class='container'><div class='row'><div class='col-xs-4 col-xs-offset-4'>"."<h1 class='text-center text-danger'><Olá></Olá> ".$_SESSION['name']."</h1>"."</div></div></div>";
 ?>
+<div class="container">
+<div class="row">
+<div class="col-xs-4 col-xs-offset-4">
+<a href="editar.php"><button class="btn btn-warning form-control">Editar Conta</button></a>
+<a href="logout.php"><button class="btn btn-danger form-control margin">Sair</button></a>
+</div>
+</div>
+</div>
 </body>
 </html>
