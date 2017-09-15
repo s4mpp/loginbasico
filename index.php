@@ -18,7 +18,7 @@ session_start();
 <label>E-Mail:</label>
 <input type="email" name="email" class="form-control" placeholder="Digite seu E_Mail" required>
 <label>Senha:</label>
-<input type="password" name="pass" class="form-control" placeholder="Digite sua senha">
+<input type="password" name="pass" class="form-control" placeholder="Digite sua senha" required>
 <button class="btn btn-danger form-control margin" value="submit">Login</button>
 </form>
 <a href="cadastrar.php"><button class="btn btn-warning form-control">Não tem uma conta?</button></a>

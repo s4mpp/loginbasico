@@ -13,8 +13,8 @@ require_once('verificacao.php');
 ?>
 <div class="container">
 <div class="row">
-<div class="col-xs-4 col-xs-offset-4">
-<form method="post" class="form-group" action="edit.php">
+<div class="col-xs-4 col-xs-offset-4 bg-primary margin-radius padding">
+<form method="post" class="form-group margin" action="edit.php">
 <label>Nome:</label>
 <input type="text" name="name" class="form-control" placeholder="Digite seu Nome" value="<?php echo $_SESSION['name']; ?>" >
 <label>Sobrenome:</label>
@@ -25,8 +25,10 @@ require_once('verificacao.php');
 <input type="password" name="pass" class="form-control" placeholder="Digite sua senha">
 <label>Confirma Senha:</label>
 <input type="password" name="pass2" class="form-control" placeholder="Confirma senha">
-<button class="btn btn-danger form-control margin" value="submit">Enviar</button>
+<button class="btn btn-info form-control margin" value="submit" style="color:black;">Enviar</button>
 </form>
+<a href="delete.php"><button class="btn btn-danger form-control" value="submit" style="color:black;">Deletar Conta</button></a>
+<a href="DGP.php"><button class="btn btn-warning form-control margin" value="submit" style="color:black;">Voltar</button></a>
 </div>
 </div>
 </div>
