@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bootstrap</title>
+<title>Login</title>
 <meta name="viewport" content="width=device-width" >
 <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
 <link rel="stylesheet" href="css/style.css" media="screen">

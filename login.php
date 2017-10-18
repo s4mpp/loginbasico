@@ -1,23 +1,18 @@
 <?php
 session_start();
-$email = addslashes($_POST['email']);
-$pass = md5(addslashes($_POST['pass']));
-try {
-    $db = "mysql:dbname=DGP;host=127.0.0.1";
-    $dbuser = "root";
-    $dbpass = "";
-    $pdo = new PDO ($db, $dbuser, $dbpass);
-    if(isset($email) && !empty($email) && isset($pass) && !empty($pass)){
-    $sql = "SELECT * FROM users WHERE email = '$email' AND pass = '$pass'";
-    $sql = $pdo->query($sql);
-    $_SESSION = $sql->fetch();
-    if($sql->rowCount() > 0){
+if(isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['pass']) && !empty($_POST['pass'])){
+    require "config.php";
+    $conf = new Conf();
+    $email = $_POST['email'];
+    $pass = md5($_POST['pass']);
+    $conf->select("users", array("email"=>$email,"pass"=>$pass));
+    $_SESSION = $conf->resultArray();
+if($conf->resultRowCount() > 0){
     header('Location: DGP.php');
-    }else{header("Location: index.php");}
-    }else{
+    exit;
+}else{
     echo "Seu Email ou sua senha esta errado";
-    }
-}catch (PDOException $e){
-    echo "Erro: ".$e->getMessage();
+}}else{
+    header("Location: index.php");
+    exit;
 }
-?>
